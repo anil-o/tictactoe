@@ -6,6 +6,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.player {
+    display: flex;
+    margin-bottom: 48px;
+}
+
+.img-player {
+    height: 70px;
+    width: 70px;
+    margin-right: 16px;
+}
+
+.text-and-distance-player {
+    font-size: 24px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.player-inactive {
+    opacity: 0.7;
 }
 
 tr {
@@ -57,4 +80,22 @@ table tr td:last-child {
 
 .d-none {
     display: none;
+}
+
+.horizontal-line {
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 400px;
+    position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+}
+
+.make-vertical {
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 400px;
+    position: absolute;
+    transform: rotate(90deg) scaleX(0.0);
+    transition: transform 225ms ease-in-out;
 }

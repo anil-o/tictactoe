@@ -12,6 +12,29 @@
 <body>
     <script src="script.js"></script>
     <div class="field-container">
+
+        <div class="player">
+            <div id="player1" class="text-and-distance-player player-inactive">
+                <img class="img-player" src="img/circle.png">Player 1
+            </div>
+
+            <div id="player2" class="text-and-distance-player">
+                <img class="img-player" src="img/cross.png">Player 2
+            </div>
+        </div>
+
+        <div id="line-0" class="horizontal-line" style="top: 402px;"></div>
+        <div id="line-1" class="horizontal-line" style="top: 542px;"></div>
+        <div id="line-2" class="horizontal-line" style="top: 683px;"></div>
+
+        <div id="line-3" class="make-vertical" style="top: 532px;"></div>
+        <div id="line-4" class="make-vertical" style="top: 532px; right: 320px;"></div>
+        <div id="line-5" class="make-vertical" style="top: 532px; left: 320px;"></div>
+
+        <div id="line-6" class="horizontal-line" style="top: 532px; transform: rotate(45deg) scaleX(0.0); left: 453px;"></div>
+        <div id="line-7" class="horizontal-line" style="top: 532px; transform: rotate(-45deg) scaleX(0.0); left: 471px;"></div>
+
+
         <table>
             <tr>
                 <td onclick="fillShape(0)">
