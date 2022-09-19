@@ -6,36 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>TicTacToe</title>
+    <link rel="icon" type="image/favicon-png" href="img/favicon.png">
 </head>
 
 <body>
-    <script src="script.js"></script>
-    <div class="field-container">
 
-        <div class="player">
-            <div id="player1" class="text-and-distance-player player-inactive">
-                <img class="img-player" src="img/circle.png">Player 1
-            </div>
+    <img id="game-over" class="game-over d-none" src="/img/game-over.png">
+    <button onclick="restartGame()" id="restart-btn" class="restart-btn d-none">Restart</button>
 
-            <div id="player2" class="text-and-distance-player">
-                <img class="img-player" src="img/cross.png">Player 2
-            </div>
+    <div class="player">
+        <div id="player1" class="text-and-distance-player player-inactive">
+            <img class="img-player" src="img/circle.png">Player 1
         </div>
 
-        <div id="line-0" class="horizontal-line" style="top: 402px;"></div>
-        <div id="line-1" class="horizontal-line" style="top: 542px;"></div>
-        <div id="line-2" class="horizontal-line" style="top: 683px;"></div>
-
-        <div id="line-3" class="make-vertical" style="top: 532px;"></div>
-        <div id="line-4" class="make-vertical" style="top: 532px; right: 320px;"></div>
-        <div id="line-5" class="make-vertical" style="top: 532px; left: 320px;"></div>
-
-        <div id="line-6" class="horizontal-line" style="top: 532px; transform: rotate(45deg) scaleX(0.0); left: 453px;"></div>
-        <div id="line-7" class="horizontal-line" style="top: 532px; transform: rotate(-45deg) scaleX(0.0); left: 471px;"></div>
-
-
-        <table>
+        <div id="player2" class="text-and-distance-player">
+            <img class="img-player" src="img/cross.png">Player 2
+        </div>
+    </div>
+    <table>
+        <div class="position-absolute">
             <tr>
                 <td onclick="fillShape(0)">
                     <div class="postion-for-shape">
@@ -96,9 +87,22 @@
                     </div>
                 </td>
             </tr>
-        </table>
-    </div>
+            <div class="position-absolute">
+                <div id="line-0" class="horizontal-line horizontal-line-line-0-mobile" style="top: -76px; right: -199px;"></div>
+                <div id="line-1" class="horizontal-line horizontal-line-line-1-mobile" style="top: 63px; right: -199px;"></div>
+                <div id="line-2" class="horizontal-line horizontal-line-line-2-mobile" style="top: 203px; right: -199px;"></div>
 
+                <div id="line-3" class="make-vertical" style="top: 62px; left: -201px;"></div>
+                <div id="line-4" class="make-vertical make-vertical-line-4-mobile" style="top: 62px; left: -61px;"></div>
+                <div id="line-5" class="make-vertical make-vertical-line-5-mobile" style="top: 62px; left: -341px;"></div>
+
+                <div id="line-6" class="horizontal-line horizontal-line-line-6-mobile"
+                    style="top: 67px; left: -194px; transform: rotate(45deg) scaleX(0.0);"></div>
+                <div id="line-7" class="horizontal-line horizontal-line-line-7-mobile"
+                    style="top: 63px; right: -199px; transform: rotate(-45deg) scaleX(0.0);"></div>
+            </div>
+        <div>
+    </table>
 </body>
 
 </html>
